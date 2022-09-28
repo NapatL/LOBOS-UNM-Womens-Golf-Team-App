@@ -1,0 +1,71 @@
+<html>
+<head>
+<script language="javascript">  
+function checkPasswordUser() {
+  //document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
+  user = document.getElementById('user').value
+  pwd = document.getElementById('password').value
+  if (user=="jenny" && pwd=="lobos") {
+    alert("Login Successful!")
+    window.location.href='retrieve.html',true;
+  } 
+  
+}
+</script>
+<title>Login</title>
+</head>
+<style>
+    table, th, td {
+        border-collapse: collapse;
+        padding: 5px;
+        border: 1px solid darkgray;
+    }
+    td {
+        text-align: left;
+    }
+</style>
+
+<body>
+    <div style="position:absolute; left: 5%; ">
+        <img src="lobos-logo2.png" alt="logo" style="float: left;margin-top:13px" />
+        <img src="lobos-logo1.png" alt="logo" style="float: left;margin-top:13px" />
+        <img src="UNM-logo.png" alt="logo" style="float: right;margin-top:13px" />
+        
+        <h1 style="position: relative;  width:800px;margin-top:15px;
+        left: 10px;"> UNM WOMEN’S GOLF</h1>
+         
+        <br />
+        <table style="background-color: lightgrey; margin-left: 20%; margin-top:10%; margin-bottom:10%">
+            <th>
+                <div class="login-form" style="text-align: left;">
+                    <h2>Login Form for LOBOS Women's Golf App</h2>
+                        <label style="margin-left:30%" for="user">User Name:</label>
+                        <input style="margin-left:1%" type="text" id="user" placeholder="User Name">
+                        
+                        <label style="margin-left:30%" for="password">Password:</label>
+                        <input style="margin-left:3%" type="password" id="password" placeholder="Password">
+                        <br /><br />
+                        <button style="margin-left:30%" onclick="checkPasswordUser()">Login</button>  
+                </div>
+            </th>
+        </table>
+            
+            
+          
+            
+
+            
+        
+        <br />
+          <br />
+                    
+         
+          <table id="footer" style="width:100%; color:black">
+            <tr>
+                <th style="width:100%; color:white; background-color: black">Site maintained by Jenny@gmail.com. Copyright © 2022 The University of New Mexico. All rights reserved</th>
+            </tr>
+          </table>
+        </div>
+    <div >
+</body>
+</html>
