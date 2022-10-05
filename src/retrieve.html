@@ -1,0 +1,89 @@
+<html>
+<head>
+    <title>Home Page LOBOS Women's Golf</title>
+    <script language="javascript">
+        window.addEventListener("load", readAll)
+        
+        
+        function readAll() {
+            btn.addEventListener("click", sendData);
+        }
+
+        function sendData() {
+            location.href="create.html"
+        }
+    </script>
+</head>
+<style>
+    table, th, td {
+        border-collapse: collapse;
+        padding: 5px;
+        border: 1px solid darkgray;
+    }
+    td {
+        text-align: left;
+    }
+</style>
+
+<body>
+    <div style="position:absolute; left: 5%">
+        <a href="https://golobos.com/sports/wgolf/" target="_blank"><img src="lobos-logo2.png" alt="logo" style="width:40px;height:41px;" /></a>
+        <a href="https://golobos.com/sports/wgolf/" target="_blank"><img src="lobos-logo1.png" alt="logo" style="width:40px;height:41px;" /></a>
+        <span class="unmTextlogo" style="position: relative; left: 10px; font-size: 32px;"> UNM WOMEN’S GOLF</span>
+        <a  href="https://www.unm.edu/" target="_blank"><img class="unmlogo" src="UNM-logo.png" alt="logo" style="float: right;" /></a>
+        <div>          
+            <table style="background-color: pastelblue;width:100%;"; id="">
+                <tr>
+                    <th style="background-color: lightyellow;font-size: 22px;" >UNM Women's Golf Players Statistics.
+                        <input style="margin-left:50%; color: black;background-color: lightgreen;width:100px;white-space: normal;border-radius: 12px;" type="button" id="btn" class="btn" onclick="sendData()"
+                        value="CREATE
+                        New Player
+                        Entry">
+                    </th>
+                </tr>
+            </table>
+            
+            <table style="background-color: rgb(208, 237, 247)"; id="golfPlayersList">
+                <thead>
+                <tr>
+                        <th style="background-color: lightgrey"> Player ID</th>
+                        <th style="background-color: lightgrey"> Player Name</th>
+                        <th style="background-color: lightgrey"> Player Age</th>
+                        <th style="background-color: lightgrey"> Player Nationality</th>
+                        <th style="background-color: lightgrey"> World Ranking </th>
+                        <th style="background-color: lightgrey"> Rounds </th>
+                        <th style="background-color: lightgrey"> Strokes </th>
+                        <th style="background-color: lightgrey"> Par Rounds</th>
+                        <th style="background-color: lightgrey"> Events </th>
+                        <th style="background-color: lightgrey"> Top 5 </th>
+                        <th style="background-color: lightgrey"> Top 10 </th>
+                        <th colspan="2" style="background-color: lightgrey"> Actions </th>
+                </tr>      
+                </thead>   
+                <tr>
+                    <td>1</td><td>Lauren Lehigh</td><td>21</td><td>USA</td><td>510</td>
+                    <td>33</td><td>2443</td><td>9</td><td>11</td><td>1</td>
+                    <td>1</td>
+                    <td style="background-color: white"><a href=update-one.html?playerid=1><img src="edit-icon1.png" alt="Edit Player"></a></td>
+                    <td style="background-color: white"><a href=delete-one.html?playerid=1><img src="trash-bin-icon1.png" alt="Delete Player"></a></td>
+                </tr>
+                 
+            </table>
+        
+            <br /><br />
+                    
+            <table style="background-color: lightyellow; border: none; border-collapse:collapse; width:100%";>
+                <tr style=" border: none;">
+                    <th style=" border: none;text-align: left;"><b>LOBOS Data from:</b><br />https://golobos.com/sports/wgolf/roster/  [Statistics menu] </th><th style=" border: none;text-align: left;"><b>World Ranking Data from:</b><br />https://www.wagr.com/womens-ranking  </th>
+                </tr>
+            </table>
+            <br /><br />
+            <table id="footer" style="width:100%; color:black">
+                <tr>
+                    <th style="width:100%; color:white; background-color: black">Site maintained by Jenny@gmail.com. Copyright © 2022 The University of New Mexico. All rights reserved</th>
+                </tr>
+            </table>
+        </div>
+    </div >
+</body>
+</html>

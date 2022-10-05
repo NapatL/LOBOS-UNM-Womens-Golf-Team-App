@@ -1,0 +1,77 @@
+<html>
+<head>
+    <title>Create a new Golf Player</title>
+    <script>
+        window.addEventListener("load", main)
+
+        function main() {
+            btn.addEventListener("click", sendData)
+        }
+
+        function sendData() {
+            location.href="retrieve.html"
+        }
+    </script>
+</head>
+<style>
+    table, th, td {
+        border-collapse: collapse;
+        padding: 5px;
+    }
+    td {
+        text-align: left;
+    }
+</style>
+<body>
+    <div style="position:absolute; left: 5%">
+        <a href="https://golobos.com/sports/wgolf/" target="_blank"><img src="lobos-logo2.png" alt="logo" style="width:40px;height:41px;" /></a>
+        <a href="https://golobos.com/sports/wgolf/" target="_blank"><img src="lobos-logo1.png" alt="logo" style="width:40px;height:41px;" /></a>
+        <span class="unmTextlogo" style="position: relative; left: 10px; font-size: 32px;"> UNM WOMEN’S GOLF</span>
+        <a  href="https://www.unm.edu/" target="_blank"><img class="unmlogo" src="UNM-logo.png" alt="logo" style="float: right;" /></a>
+        
+        <h2> Create a new LOBOS Golf Player and stats</h2>
+        <table>
+            <tr >
+                <td>Player ID:</td><td> <input id = "playerid" value=2></td>
+            </tr>
+            <tr>
+                <td>Player Name:</td><td> <input id = "playername" value="Napat Lertsadwattana" ></td>
+            </tr>
+            <tr>
+                <td>Player Age:</td><td> <input id = "playerage" value=22></td>
+            </tr>
+            <tr>
+                <td>Player Nationality:</td><td> <input id = "playernationality"  value="THAI"></td>
+            </tr>
+            <tr>
+                <td>World Ranking:</td><td> <input id = "playerworldranking" value=285></td>
+            </tr>
+            <tr>
+                <td>Rounds Played:</td><td> <input id = "playerrounds" value=33></td>
+            </tr>
+            <tr>
+                <td>Strokes Played:</td><td> <input id = "playerstrokes" value=2449></td>
+            </tr>
+            <tr>
+                <td>Par Rounds:</td><td> <input id = "playerparrounds" value=12></td>
+            </tr>
+            <tr>
+                <td>Events Attended:</td><td> <input id = "playerevents" value=11></td>
+            </tr>
+            <tr>
+                <td>Top 5 Results:</td><td> <input id = "playertop5" value=1></td>
+            </tr>
+            <tr>
+                <td>Top 10 Results:</td><td> <input id = "playertop10" value=4></td>
+            </tr>
+        </table>
+        <br>
+        <input type="button" id="btn" style="background-color: lightgreen;border-radius: 8px;" value="CREATE New Player Entry"><br><br /><br />
+        <table id="footer" style="width:100%; color:black">
+            <tr>
+                <th style="width:100%; color:white; background-color: black">Site maintained by Jenny@gmail.com. Copyright © 2022 The University of New Mexico. All rights reserved</th>
+            </tr>
+        </table>
+    </div> 
+</body>
+</html>
