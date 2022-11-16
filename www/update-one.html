@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<head>
+    <title>Update a Golf Player's Details</title>
+    <script language="javascript">
+        window.addEventListener("load", main)
+        function main() {
+            readOne()
+            btn.addEventListener("click", writeOne)
+        }
+        function readOne() {
+            params = (new URL(document.location)).searchParams
+            id = params.get("playerid")
+            //document.getElementById("playerid").innerHTML = "playerid: "+id;
+
+            fetch("http://localhost:7777/retrieve-one/"+id)
+            .then(response => response.json())
+            .then(function(data) {
+                playerid.value          = data.playerid
+                playername.value        = data.playername
+                playerage.value         = data.playerage
+                playernationality.value = data.playernationality
+                playerworldranking.value = data.playerworldranking
+                playerrounds.value      = data.playerrounds
+                playerstrokes.value     = data.playerstrokes
+                playerparrounds.value   = data.playerparrounds
+                playerevents.value      = data.playerevents
+                playertop5.value        = data.playertop5
+                playertop10.value       = data.playertop10
+            })
+        }
+        function writeOne() {
+           
+            data = {
+                playerid             : playerid.value,
+                playername           : playername.value,
+                playerage           : playerage.value,
+                playernationality   : playernationality.value,
+                playerworldranking  : playerworldranking.value,
+                playerrounds        : playerrounds.value,      
+                playerstrokes       : playerstrokes.value,     
+                playerparrounds     : playerparrounds.value,   
+                playerevents        : playerevents.value,      
+                playertop5          : playertop5.value,        
+                playertop10         : playertop10.value       
+            }    
+            fetch("http://localhost:7777/update", { 
+                method  : 'PUT',
+                headers : { "Content-Type": "application/json"},
+                body    : JSON.stringify(data)
+            })
+            
+            location.href="retrieve.html"
+        }
+    </script>
+</head>
+<style>
+    table, th, td {
+        border-collapse: collapse;
+        padding: 5px;
+    }
+    td {
+        text-align: left;
+    }
+/* */
+    @media 
+    only screen and (max-device-width: 450px) AND (min-device-width: 300px), (max-width: 800px)
+    {
+        .createbutton {margin-left:5% !important;width:450px !important; height:50px !important; font-size: 30px !important;}
+        .unmlogoxx {width:110px;top: 5px !important;position: absolute;top: 25px !important; right: 20px;}
+        .unmTextlogo {font-size: 40px !important; top: -5px !important; }
+        .tableinput {
+            font-size: 30px !important;
+            font-size: 4vw !important;
+        }
+        .appfooter {
+            font-size: 3vw !important;
+        }
+
+        th {
+            font-size: 30px !important;
+            font-size: 5vw !important;
+        }
+        td { 
+            font-size: 5vw !important;
+            font-size: 30px;
+        }
+        h2 {
+            font-size: 4vw !important;
+            font-size: 30px;
+        }
+    }
+
+    @media 
+    only screen and (max-device-width: 850px) AND (min-device-width: 451px), (max-width: 800px)
+    {
+        .createbutton {margin-left:5% !important;width:450px !important; height:50px !important; font-size: 30px !important;}
+        .unmlogoxx {width:110px;top: 5px !important;position: absolute;top: 25px !important; right: 20px;}
+        .unmTextlogo {font-size: 40px !important; top: -5px !important; }
+        .tableinput {
+            font-size: 30px !important;
+            font-size: 3vw !important;
+        }
+        .appfooter {
+            font-size: 2vw !important;
+        }
+
+        th {
+            font-size: 30px !important;
+            font-size: 3vw !important;
+        }
+        td { 
+            font-size: 3vw !important;
+            font-size: 30px;
+        }
+        h2 {
+            font-size: 4vw !important;
+            font-size: 30px;
+        }
+    }
+/* */
+</style>
+<body>
+    <div style="left: 5%">
+        <a href="https://golobos.com/sports/wgolf/" target="_blank"><img src="lobos-logo2.png" alt="logo" style="width:40px;height:41px;" /></a>
+        <a href="https://golobos.com/sports/wgolf/" target="_blank"><img src="lobos-logo1.png" alt="logo" style="width:40px;height:41px;" /></a>
+        <span class="unmTextlogo" style="position: relative; left: 10px; font-size: 32px;"> UNM WOMEN'S GOLF</span>
+        <a  href="https://www.unm.edu/" target="_blank"><img class="unmlogo" src="UNM-logo.png" alt="logo" style="float: right;" /></a>
+        <h2 style="margin-left:5%;"> Update a LOBOS Golf Player</h2>
+        <table class="tableplayers" style="margin-left:5%;background-color: rgb(208, 237, 247)">
+            <tr >
+                <td>Player ID:</td><td> <input class="tableinput" id = "playerid" ></td>
+            </tr>
+            <tr>
+                <td>Player Name:</td><td> <input class="tableinput" id = "playername" ></td>
+            </tr>
+            <tr>
+                <td>Player Age:</td><td> <input class="tableinput" id = "playerage" ></td>
+            </tr>
+            <tr>
+                <td>Player Nationality:</td><td> <input class="tableinput" id = "playernationality" ></td>
+            </tr>
+            <tr>
+                <td>World Ranking:</td><td> <input class="tableinput" id = "playerworldranking" ></td>
+            </tr>
+            <tr>
+                <td>Rounds Played:</td><td> <input class="tableinput" id = "playerrounds" ></td>
+            </tr>
+            <tr>
+                <td>Strokes Played:</td><td> <input class="tableinput" id = "playerstrokes" ></td>
+            </tr>
+            <tr>
+                <td>Par Rounds:</td><td> <input class="tableinput" id = "playerparrounds" ></td>
+            </tr>
+            <tr>
+                <td>Events Attended:</td><td> <input class="tableinput" id = "playerevents" ></td>
+            </tr>
+            <tr>
+                <td>Top 5 Results:</td><td> <input class="tableinput" id = "playertop5" ></td>
+            </tr>
+            <tr>
+                <td>Top 10 Results:</td><td> <input class="tableinput" id = "playertop10" ></td>
+            </tr>
+        </table>
+        <br />
+        <input class="createbutton" style="margin-left:5%;background-color: lightgreen;border-radius: 8px;" type="button" id="btn" value="UPDATE Player Entry"><br>           
+        <br /><br />
+        <table id="footer" style="width:100%; color:black">
+            <tr>
+                <th class="appfooter" style="width:100%; color:white; background-color: black">Site maintained by Jenny@gmail.com. Copyright © 2022 The University of New Mexico. All rights reserved</th>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<html>
+<head>
+  <script language="javascript">  
+    function checkPasswordUser() {
+      //document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
+      user = document.getElementById('user').value
+      pwd = document.getElementById('password').value
+      if (user=="jenny" && pwd=="lobos") {
+        alert("Login Successful!")
+        window.location.href='retrieve.html',true;
+      } else {
+        alert("INVALID USERNAME OR PASSWORD. Login FAILED! Please try again")
+      }
+    }
+  </script>
+<title>Login</title>
+</head>
+<style>
+    table, th, td {
+        border-collapse: collapse;
+        padding: 5px;
+        border: 1px solid darkgray;
+    }
+    td {
+        text-align: left;
+    }
+
+    @media 
+    only screen and (max-device-width: 450px) AND (min-device-width: 300px), (max-width: 800px)
+    {
+        .loginbutton {margin-left:10% !important;width:450px !important; height:50px !important; font-size: 30px !important;}
+        .unmlogoxx {width:110px;top: 5px !important;position: absolute;top: 25px !important; right: 20px;}
+        .unmTextlogo {font-size: 40px !important; top: -5px !important; }
+        .inputtext {
+            font-size: 30px !important;
+            font-size: 4vw !important;
+        }
+        .appfooter {
+            font-size: 3vw !important;
+        }
+
+        th {
+            font-size: 30px !important;
+            font-size: 5vw !important;
+        }
+        td { 
+            font-size: 5vw !important;
+            font-size: 30px;
+        }
+        h2 {
+            font-size: 4vw !important;
+            font-size: 30px;
+        }
+    }
+
+    @media 
+    only screen and (max-device-width: 850px) AND (min-device-width: 451px), (max-width: 800px)
+    {
+        .loginbutton {margin-left:10% !important;width:450px !important; height:50px !important; font-size: 30px !important;}
+        .unmlogoxx {width:110px;top: 5px !important;position: absolute;top: 25px !important; right: 20px;}
+        .unmTextlogo {font-size: 40px !important; top: -5px !important; }
+        .inputtext {
+            font-size: 30px !important;
+            font-size: 3vw !important;
+        }
+        .appfooter {
+            font-size: 2vw !important;
+        }
+
+        th {
+            font-size: 30px !important;
+            font-size: 3vw !important;
+        }
+        td { 
+            font-size: 3vw !important;
+            font-size: 30px;
+        }
+        h2 {
+            font-size: 4vw !important;
+            font-size: 30px;
+        }
+    }
+</style>
+
+<body>
+    <div style="left: 5%; ">
+      <a href="https://golobos.com/sports/wgolf/" target="_blank"><img src="lobos-logo2.png" alt="logo" style="width:40px;height:41px;" /></a>
+      <a href="https://golobos.com/sports/wgolf/" target="_blank"><img src="lobos-logo1.png" alt="logo" style="width:40px;height:41px;" /></a>
+      <span class="unmTextlogo" style="position: relative; left: 10px; font-size: 32px;"> UNM WOMEN'S GOLF</span>
+      <a  href="https://www.unm.edu/" target="_blank"><img class="unmlogo" src="UNM-logo.png" alt="logo" style="float: right;" /></a>
+        <br />
+        <table style="background-color: lightgrey; margin-left: 5%; margin-top:10%; margin-bottom:10%">
+            <th>
+                <div class="login-form" style="text-align: left;">
+                    <h2>Login Form for LOBOS Women's Golf App</h2>
+                        <label style="margin-left:10%" for="user">User Name:</label>
+                        <input input size=10 class="inputtext" style="margin-left:1%" type="text" id="user" placeholder="User Name">
+                        <br />
+                        <label style="margin-left:10%" for="password">Password:</label>
+                        <input input size=10 class="inputtext" style="margin-left:4%" type="password" id="password" placeholder="Password">
+                        <br /><br />
+                        <button class="loginbutton"; style="width:120px; margin-left:20%; background-color: lightgreen;border-radius: 8px;" onclick="checkPasswordUser()">Login</button>  
+                </div>
+            </th>
+        </table>
+          <br /><br />
+          <table  style="width:100%; color:black">
+            <tr>
+                <th class="appfooter" style="width:100%; color:white; background-color: black">Site maintained by Jenny@gmail.com. Copyright © 2022 The University of New Mexico. All rights reserved</th>
+            </tr>
+          </table>
+    </div>
+</body>
+</html>
